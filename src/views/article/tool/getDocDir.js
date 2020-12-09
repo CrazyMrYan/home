@@ -23,11 +23,8 @@ requireComponent.keys().forEach(fileName => {
     let comp = requireComponent(fileName)
     resultComps[fileName.replace(/^\.\/(.*)\.\w+$/, '$1')] = comp.default
 })
-console.log(resultComps,tmepListDatas)
-
 let mdListData = {
     resultComps,
     tmepListDatas
 }
-console.log(mdListData)
 export default mdListData

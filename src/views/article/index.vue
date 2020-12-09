@@ -27,10 +27,12 @@ export default {
   methods:{
     switchTo(n){
       this.markDownConetnt = n.name
+      history.replaceState(null, "",'/#/article?mdname='+n.name);
     }
   },
   mounted(){
     this.markDownConetnt = this.$route.query.mdname || 'README'
+    history.replaceState(null, "",'/#/article?mdname='+ this.markDownConetnt);
   }
 };
 </script>
@@ -46,6 +48,7 @@ export default {
   font-size: 18px;
   line-height: 50px;
   background: #fff;
+  display: none;
 }
 .catalogue{
   width: 200px;

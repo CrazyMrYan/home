@@ -1,5 +1,11 @@
 <template>
   <div class="error">
+    <div class="MbText">
+      <h2 class="">404 页面找不到咯~</h2>
+      <p>
+          很抱歉，您所请求的资源未找到! <br> 将在 {{ time == 10 ? time : "0" + time }} 秒后自动返回上个页面
+        </p>
+    </div>
     <div class="img404">
       <img src="../../images/404.gif" alt="" srcset="" />
     </div>
@@ -69,6 +75,13 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
+.MbText{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  display: none;
+  position: absolute;
+}
 .error {
   height: 100%;
   background: #fff;

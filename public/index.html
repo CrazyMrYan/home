@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <style>
-      @media screen and (max-width: 475px){
-        .about .content,.md-box .md-content{
-          min-width: 98vw !important;
+      @media screen and (max-width: 500px){
+        .about .content{
+          min-width: 90vw !important;
           margin: 0;
         }
         .catalogue{
@@ -25,9 +25,28 @@
           display: none;
         }
         #content{
-          height: 100vh !important;
+          height: 92.5vh !important;
         }
-      }
+        p,li,a,code,span{
+          font-size: 16px !important;
+        }
+        .pcTitle{
+          display: none !important;
+        }
+        .explain,#header{
+          display: none;
+        }
+        .error .img404 img {
+          width: 300px !important;
+          height: 350px !important;
+        }
+        .img404{
+          padding-right: unset !important;
+        }
+        .title,.MbText{
+          display: block !important;
+        }
+        
       @media screen and (min-width: 500px){
         .title{
           display: none;
@@ -43,7 +62,7 @@
           min-width: 80vw !important;
         }
       }
-      @media screen and (max-width: 1600px){
+      @media screen and (min-width: 1600px){
         .about .content,.md-box .md-content{
           min-width: 60vw !important;
         }

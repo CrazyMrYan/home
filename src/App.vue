@@ -60,5 +60,7 @@ export default {
     .md-content h4{
       font-size: 22px;
     }
-    
+    p>code{
+      color: #1DA57A;
+    }
 </style>

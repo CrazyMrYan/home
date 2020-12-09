@@ -1,7 +1,10 @@
 <template>
   <div class="about" ref="main">
+        <div class="title">
+      {{markDownConetnt}}
+    </div>
     <div class="content">
-      <h2>来自 2019 年 10 月份的一篇自我介绍</h2>
+      <h2 class="pcTitle">来自 2019 年 10 月份的一篇自我介绍</h2>
       <p>Hi，我是严家辉</p>
       <p>
         别人也喜欢叫我 <span class="code">严老湿</span>、<span class="code"
@@ -118,20 +121,27 @@
 <script>
 
 export default {
-  components:{},
-  computed: {},
-  //监控data中的数据变化
-  watch: {
-
-  },
-  methods: {
-
-  },
-  created() {},
+data(){
+  return{
+    markDownConetnt:'来自 2019 年 10 月份的一篇自我介绍'
+  }
+}
 };
 </script>
 <style lang='scss' scoped>
-
+.title{
+  width: 100%;
+  height: 50px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 50px;
+  background: #fff;
+}
 .code {
   background: #f0f0f0;
   padding: 0.1rem;

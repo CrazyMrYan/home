@@ -70,7 +70,7 @@ export default {
       navigationData: [
         {
           label: "主页",
-          link: "/",
+          link: "/home",
           key: "home",
           children: [],
         },
@@ -100,7 +100,13 @@ export default {
     },
   },
   created() {
-    this.current[0] = location.hash.replace("#/", "") || "home";
+    let hash, str;
+    if (location.hash.replace("#/", "")) {
+      hash = location.hash.match(/\#\/.*?\?/g);
+      if (!hash) str = location.hash.replace("#/", "");
+      else str = hash[0].replace("#/", "").replace("?", "");
+    }
+    this.current[0] = str || "home";
   },
 };
 </script>
