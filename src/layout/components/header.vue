@@ -80,23 +80,9 @@ export default {
           key: "about",
           children: [],
         },
+
         {
-          label: "博客分类",
-          children: [
-            {
-              label: "javaScript",
-              link: "/javaScript",
-              key: "item1",
-            },
-            {
-              label: "Vue",
-              link: "/Vue",
-              key: "item2",
-            },
-          ],
-        },
-        {
-          label: "测试md",
+          label: "博客文章",
           link: "/article",
           key: "article",
           children: [],

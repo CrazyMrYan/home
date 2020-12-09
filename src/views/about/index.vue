@@ -111,14 +111,14 @@
       <p>现在很多前端名为前端，实际上已经是后端或者产品负责人了。</p>
     </div>
     <div class="footer"></div>
-    <GoBack />
+    
   </div>
 </template>
 
 <script>
-import GoBack from '../../components/backTop'
+
 export default {
-  components:{GoBack},
+  components:{},
   computed: {},
   //监控data中的数据变化
   watch: {

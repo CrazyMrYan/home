@@ -8,15 +8,16 @@
     </a-layout-content>
     <a-layout-footer id="footer">
       <Footer />
-    </a-layout-footer>
+    </a-layout-footer><GoBack el="content"/>
   </a-layout>
 </template>
 
 <script>
+import GoBack from '../../components/backTop'
 import Header from "../components/header";
 import Footer from "../components/footer";
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, GoBack},
 };
 </script>
 
@@ -24,6 +25,7 @@ export default {
 #content {
   height: 85vh;
   overflow-y: auto;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     /*滚动条整体样式*/
     width:4px; /*高宽分别对应横竖滚动条的尺寸*/

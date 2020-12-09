@@ -7,10 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <style>
-      @media screen and (max-width: 375px){
+      @media screen and (max-width: 475px){
         .about .content,.md-box .md-content{
           min-width: 98vw !important;
           margin: 0;
+        }
+        .catalogue{
+          display: none;
+        }
+        .md-box{
+          padding: 0;
+        }
+        .md-box .md-content{
+          width: 80vw !important;
+        }
+        .ant-layout-header{
+          display: none;
+        }
+        #content{
+          height: 100vh !important;
+        }
+      }
+      @media screen and (min-width: 500px){
+        .title{
+          display: none;
         }
       }
       @media screen and (max-width: 800px){
