@@ -27,12 +27,17 @@ export default {
   methods:{
     switchTo(n){
       this.markDownConetnt = n.name
-      history.replaceState(null, "",'/#/article?mdname='+n.name);
+      // 改为push 带参数
+      this.$router.push({
+        path:'/article',
+        query:{
+          mdname:n.name
+        }
+      })
     }
   },
   mounted(){
     this.markDownConetnt = this.$route.query.mdname || 'README'
-    history.replaceState(null, "",'/#/article?mdname='+ this.markDownConetnt);
   }
 };
 </script>

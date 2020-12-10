@@ -25,5 +25,8 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach(transition => {
+  //将元素滚动至顶部
+  document.getElementById('content').scrollTop = 0;
+  document.documentElement.scrollTop = 0;
   NProgress.done();
 });

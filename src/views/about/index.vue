@@ -180,8 +180,7 @@ data(){
   padding: 20px;
   box-sizing: border-box;
   background: #fff;
-  //   height: 100%;
-
+  padding-top: 60px;
   .content {
     width: 40vw;
     margin: 0 auto;
