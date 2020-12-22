@@ -1,4 +1,15 @@
-# vue-editor
+# [vue-editor](https://github.com/CrazyMrYan/home)
+
+## description
+
+## Features
+[√] markDown
+
+[√] vue-router
+
+[√] vue
+
+[√] ant-design-vue
 
 ## Project setup
 ```

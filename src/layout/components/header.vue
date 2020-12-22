@@ -63,6 +63,8 @@
   </div>
 </template>
 <script>
+import mdListData from "../../views/article/tool/getDocDir";
+
 export default {
   data() {
     return {
@@ -72,20 +74,20 @@ export default {
           label: "主页",
           link: "/home",
           key: "home",
-          children: [],
+          childrens: [],
         },
         {
           label: "关于本站",
           link: "/about",
           key: "about",
-          children: [],
+          childrens: [],
         },
 
         {
           label: "博客文章",
           link: "/article",
           key: "article",
-          children: [],
+          childrens: [...mdListData.tmepListDatas],
         },
       ],
     };
@@ -98,6 +100,27 @@ export default {
         });
       }
     },
+    initNavData() {
+      let el = document.getElementById("menu");
+      el.innerHTML = "";
+      this.navigationData.forEach((item) => {
+        let child = document.createElement("h2");
+        child.textContent = item.label;
+        child.className =
+          location.hash.replace("#", "") === item.link ? "checked" : "";
+        child.addEventListener(
+          "click",
+          () => {
+            this.clickMenuItem(item);
+          },
+          false
+        );
+        el.appendChild(child);
+      });
+    },
+  },
+  mounted() {
+    this.initNavData();
   },
   created() {
     let hash, str;
@@ -112,6 +135,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.subpage {
+  color: #000;
+}
 .header {
   display: flex;
   img {

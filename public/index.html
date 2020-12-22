@@ -1,94 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <style>
-      @media screen and (max-width: 500px){
-        .about .content{
-          min-width: 90vw !important;
-          margin: 0;
-        }
-        .catalogue{
-          display: none;
-        }
-        .md-box{
-          padding: 0;
-        }
-        .md-box .md-content{
-          width: 80vw !important;
-        }
-        .ant-layout-header{
-          display: none;
-        }
-        #content{
-          height: 92.5vh !important;
-        }
-        p,li,a,code,span{
-          font-size: 16px !important;
-        }
-        .home h2{
-          font-size: 20px !important;
-        }
-        .pcTitle{
-          display: none !important;
-        }
-        .explain,#header{
-          display: none;
-        }
-        .error .img404 img {
-          width: 300px !important;
-          height: 350px !important;
-        }
-        .img404{
-          padding-right: unset !important;
-        }
-        .title,.MbText{
-          display: block !important;
-        }
-        
-      @media screen and (min-width: 500px){
-        .title{
-          display: none;
-        }
-      }
-      @media screen and (max-width: 800px){
-        .about .content,.md-box .md-content{
-          min-width: 90vw !important;
-        }
-      }
-      @media screen and (max-width: 1200px){
-        .about .content,.md-box .md-content{
-          min-width: 80vw !important;
-        }
-      }
-      @media screen and (min-width: 1600px){
-        .about .content,.md-box .md-content{
-          min-width: 60vw !important;
-        }
-      }
-      /* @media screen and (max-width: 800px){
-        .md-box .md-content{
-          min-width: 85vw !important;
-        }
-      } */
-    </style>
-  </head>
-  <body>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+  <nav style="display:none" id="menu">
+  </nav>
+  <main id="panel">
     <div id="app"></div>
-    <script>
-      var result = window.matchMedia('(max-width: 768px)');
-      if (result.matches) {
-      //console.log('页面宽度小于等于768px');
-      //写移动端的js效果
-      } else {
-      //console.log('页面宽度大于768px');
-      //写页面宽度大于768px的js效果
-      }
-    </script>
-  </body>
+  </main>
+
+  <script>
+    var result = window.matchMedia('(max-width: 768px)');
+
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script>
+  <script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70
+    });
+      // Toggle button
+
+  </script>
+</body>
+
 </html>

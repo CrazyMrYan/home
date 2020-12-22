@@ -130,7 +130,7 @@ data(){
 </script>
 <style lang='scss' scoped>
 .title{
-  width: 100%;
+  width: 99%;
   height: 50px;
   display: none;
   position: fixed;
